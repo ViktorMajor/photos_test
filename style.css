@@ -20,7 +20,7 @@ body {
   padding: 0;
 }
 body p {
-  font-size: 25px;
+  font-size: 27px;
 }
 
 header {
@@ -184,7 +184,7 @@ button:hover {
 .menu-toggle{
   display: none;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #contact {
     max-width: 800px;
     margin: 0 auto;
