@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotós Portfólió</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+  <nav>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Főoldal</a></li>
+      <li><a href="#portfolio">Portfólió</a></li>
+      <li><a href="#about">Rólam</a></li>
+      <li><a href="#contact">Kapcsolat</a></li>
+    </ul>
+  </nav>
+</header>
+
+  
+  <section id="hero">
+    <video autoplay muted loop>
+      <source src="media/13040539_1080_1920_50fps.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>Időtlen Esztétika</h1>
+      <p>Prémium fotográfia és vizuális művészet</p>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfólió</h2>
+    <div class="gallery">
+
+      <div class="gallery-item"><img src="media/compressed_pexels-2148942860-30352190.webp" alt="Kép 2"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-adilya-2148931609-30346385.webp" alt="Kép 3"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-alancabello-2911379.webp" alt="Kép 4"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-anna-danilina-241843489-30142112.webp" alt="Kép 5"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-danxavier-1102341.webp" alt="Kép 6"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-emma-bauso-1183828-2253870.webp" alt="Kép 7"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-eugenia-remark-5767088-19254483.webp" alt="Kép 8"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-guilhermealmeida-1858175.webp" alt="Kép 9"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-imagestudio-1488312.webp" alt="Kép 10"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-jay-soundo-2148060180-30367952.webp" alt="Kép 11"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-liathyrax-1375501465-30429869.webp" alt="Kép 12"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-lolarussian-1855582.webp" alt="Kép 13"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-moph-30158553.webp" alt="Kép 14"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-rocsana99-948185.webp" alt="Kép 15"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-solliefoto-313707.webp" alt="Kép 16"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-tbd-859104985-30325070.webp" alt="Kép 17"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-thgusstavo-1933873.webp" alt="Kép 18"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-tiarrasorte-30337238.webp" alt="Kép 19"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-viktoriia-2148951630-30356650.webp" alt="Kép 20"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-wendelmoretti-1730877.webp" alt="Kép 21"></div>
+      <div class="gallery-item"><img src="media/compressed_pexels-yan6in-2148824398-30337812.webp" alt="Kép 22"></div>
+    </div>
+  </section>
+  
+  <section id="about">
+    <h2>Rólam</h2>
+    <p>Üdvözöllek! A fényképezés számomra több mint szenvedély – egy olyan művészi eszköz, amely lehetővé teszi, hogy időtlen pillanatokat örökítsek meg modern, letisztult és exkluzív stílusban.
+
+Munkámban az elegancia és a vizuális történetmesélés találkozik. Hiszem, hogy egy jól elkapott pillanat többet mond ezer szónál, ezért minden projektemet a legapróbb részletekig átgondolom. Az esztétikai érzékemet folyamatosan fejlesztem, hogy minden egyes kép prémium minőséget tükrözzön.
+
+Legyen szó portréról, divatfotóról vagy egyedi vizuális koncepcióról, célom, hogy minden kép egyedi atmoszférát teremtsen és mély benyomást keltsen. Ha inspiráló vizuális tartalmat keresel, amely kitűnik a tömegből, jó helyen jársz.</p>
+  </section>
+  
+  <section id="contact">
+    <h2>Kapcsolat</h2>
+    <form>
+      <input type="text" placeholder="Név" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Üzenet" required></textarea>
+      <button type="submit">Küldés</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fotós Portfólió. Minden jog fenntartva.</p>
+  </footer>
+
+  <div id="image-modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-image">
+</div>
+
+</body>
+</html>

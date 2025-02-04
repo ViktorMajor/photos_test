@@ -1,0 +1,275 @@
+/* Luxus Portfólió Stílus */
+:root {
+  --primary-color: #1e1e1e;
+  --secondary-color: #e4c590;
+  --background-color: #0f0f0f;
+  --text-color: #ffffff;
+  --border-color: #2d2d2d;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --transition-speed: 0.4s;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+  text-align: center;
+  z-index: 999; 
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color var(--transition-speed) ease;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+nav {
+  position: relative;
+  z-index: 1000;
+}
+.nav-links {
+  position: relative;
+  z-index: 1001;
+}
+
+
+#hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+#hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  background: rgba(30, 30, 30, 0.8);
+  padding: 2rem 3rem;
+  border-radius: 15px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: var(--secondary-color);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+}
+
+#portfolio {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.gallery {
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+#about {
+  padding: 0 10rem;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+#about {
+  padding: 0 1rem;
+}
+#contact {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  background: #1e1e1e;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+button {
+  padding: 1rem;
+  background: var(--secondary-color);
+  color: #000;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d1a564;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background: var(--text-color);
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Mobil navigáció */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 100;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    display: flex;
+    top: auto;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 0;
+  }
+}
+
+/* Hamburger ikon */
+.bar {
+  width: 30px;
+  height: 4px;
+  background: var(--text-color);
+  margin: 5px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+footer {
+  background: #1e1e1e;
+  padding: 1rem;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 95%;
+  max-height: 95vh;
+  object-fit: contain;
+}
+
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
