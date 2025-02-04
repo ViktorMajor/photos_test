@@ -10,12 +10,7 @@
   --transition-speed: 0.4s;
 }
 
-html {
-  font-size: 16px; 
-}
-body {
-  font-size: 1rem;
-}
+
 
 body {
   font-family: 'Playfair Display', serif;
@@ -23,6 +18,9 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
+}
+body p {
+  font-size: 25px;
 }
 
 header {
@@ -192,6 +190,9 @@ button:hover {
   header {
     background: none;
   }
+  body p {
+  font-size: 16px;
+}
   .menu-toggle {
     display: flex;
     flex-direction: column;
