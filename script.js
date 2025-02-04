@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".gallery-item img");
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-image");
+  const closeBtn = document.querySelector(".close");
+
+  modal.style.display = "none";
+  images.forEach((img) => {
+    img.addEventListener("click", function () {
+      modal.style.display = "flex";
+      modalImg.src = this.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
   const links = document.querySelectorAll(".nav-links a");
@@ -17,41 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  
- links.forEach((link) => {
-   link.addEventListener("click", function (e) {
-     e.preventDefault(); // Megakadályozza az alapértelmezett ugrást
-     const targetId = this.getAttribute("href");
-     const targetSection = document.querySelector(targetId);
-     if (targetSection) {
-       targetSection.scrollIntoView({ behavior: "smooth" });
-     }
-   });
- });
-
-});
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".gallery-item img");
-    const modal = document.getElementById("image-modal");
-    const modalImg = document.getElementById("modal-image");
-    const closeBtn = document.querySelector(".close");
-
-    modal.style.display = "none";
-    images.forEach((img) => {
-      img.addEventListener("click", function () {
-        modal.style.display = "flex";
-        modalImg.src = this.src;
-      });
-    });
-
-    closeBtn.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-
-    modal.addEventListener("click", function (e) {
-      if (e.target === modal) {
-        modal.style.display = "none";
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // Megakadályozza az alapértelmezett ugrást
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
       }
     });
   });
+});
