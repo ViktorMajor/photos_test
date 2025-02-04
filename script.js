@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalImg = document.getElementById("modal-image");
   const closeBtn = document.querySelector(".close");
 
-  // Alapból ne állítsunk be display-t itt, mert a CSS-ben már rejtve van.
+  modal.style.display = "none"; 
 
   images.forEach((img) => {
     img.addEventListener("click", function () {
