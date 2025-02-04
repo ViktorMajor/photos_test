@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalImg = document.getElementById("modal-image");
     const closeBtn = document.querySelector(".close");
 
+    modal.style.display = "none";
     images.forEach((img) => {
       img.addEventListener("click", function () {
         modal.style.display = "flex";
