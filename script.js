@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalImg = document.getElementById("modal-image");
   const closeBtn = document.querySelector(".close");
 
-  modal.style.display = "none";
+  // Alapból ne állítsunk be display-t itt, mert a CSS-ben már rejtve van.
+
   images.forEach((img) => {
     img.addEventListener("click", function () {
-      modal.style.display = "flex";
+      modal.style.display = "flex"; // Csak akkor jelenjen meg, ha rákattintanak egy képre
       modalImg.src = this.src;
     });
   });
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
