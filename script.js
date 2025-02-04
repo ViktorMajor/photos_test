@@ -4,11 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalImg = document.getElementById("modal-image");
   const closeBtn = document.querySelector(".close");
 
-  modal.style.display = "none"; 
+  if (!modal || !modalImg || !closeBtn) {
+    console.error("A modal vagy a szükséges elemek nem találhatóak.");
+    return;
+  }
 
   images.forEach((img) => {
     img.addEventListener("click", function () {
-      modal.style.display = "flex"; // Csak akkor jelenjen meg, ha rákattintanak egy képre
+      console.log("Kép kattintva: " + this.src); // Ellenőrző log
+      modal.style.display = "flex";
       modalImg.src = this.src;
     });
   });
