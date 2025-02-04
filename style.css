@@ -172,6 +172,9 @@ button:hover {
   margin: 5px 0;
   transition: 0.3s;
 }
+.menu-toggle{
+  display: none;
+}
 
 /* Mobil navigáció */
 @media (max-width: 768px) {
